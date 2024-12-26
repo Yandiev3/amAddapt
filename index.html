@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>AMAD</title>
+</head>
+<body>
+    <header>
+        <div class="hcontainer">
+            <div class="logo">
+                <a href="#"><img src="image/logo.png" alt="AMAD"></a>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#about">О Компании</a></li>
+                    <li><a href="#portfolio">Портфолио</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                    <li><button class="btn" id="openModalBtn">Заказать</button></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Обратная связь</h2>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="firstName">Имя:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Фамилия:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <button type="submit" class="submit-btn" >Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <main>
+        <div class="topcontainer">
+            <div class="topcontent">
+                <h1>Мебель по индивидуальным проектам</h1>
+                <button class="topbtn" id="openModalBtnTop">Рассчитать стоимость</button>
+            </div>
+        </div>
+
+        <div class="advantages">
+            <div class="advcontainer">
+                <div class="advitem">
+                    <img src="image/adv1.png">
+                    <h5>Доставка по России</h5>
+                    <p>Доставим в любую точку России</p>
+                </div>
+                <div class="advitem additemBorder">
+                    <img src="image/adv2.png">
+                    <h5>Удобная оплата</h5>
+                    <p>Все формы оплаты</p>
+                </div>
+                <div class="advitem">
+                    <img src="image/adv3.png">
+                    <h5>Гарантия качества</h5>
+                    <p>Прописанная в договоре</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="about">    
+            <div class="company">
+                <div class="companycontainer">
+                    <div class="companytitle">
+                        <h>О компании</h>
+                        <p>
+                            Компания Amad.Mebel более 3 лет успешно занимается производством корпусной мебели «под ключ», предлагая своим клиентам полный спектр услуг — от разработки дизайна до установки. Мы создаем мебель, которая идеально сочетается с вашим пространством и отражает ваши потребности.
+                            <br><br>
+                            С самого начала мы ориентировались на индивидуальный подход, использование современных и экологичных материалов, и стремление к безупречному качеству. Это позволило нам завоевать доверие и признание среди наших клиентов.
+                        </p>
+                    </div>
+                    <div class="companyimg">
+                        <img src="image/company.jpeg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="portfolio" class="portfolio">
+            <div class="swiper-container mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="image/portsliderBG.jpeg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://259506.selcdn.ru/sites-static/site988190/189fc129-906f-410e-b577-b2525ee0c5ba/189fc129-906f-410e-b577-b2525ee0c5ba-11687983.jpeg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <div class="map-cont">
+            <div class="maptitle">
+                <h>Мы на карте</h>
+            </div>
+            <div class="map">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Adad35fc926e9e8f63c17632ae89610f5a0a0e4d53f63c382e37425faaf90c69b&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true&amp;margin=auto"></script>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="contacts" class="footercontainer">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><a href="tel:+79629280606">+7 962 928 06 06</a></li>
+                        <li><a href="mailto:amad.mebel@mail.ru" target="_blank">amad.mebel@mail.ru</a></li>
+                        <li><a href="https://yandex.ru/maps/-/CHQajEpK" target="_blank"><b>Адрес</b><br>Москва, ул. Дорожная улица, 54к4с19</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Социальные сети</h4>
+                    <div class="social-links">
+                        <a href="https://wa.me/79629280606" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://t.me/amadmebel" target="_blank"><i class="fab fa-telegram"></i></a>
+                        <a href="https://www.instagram.com/amad.mebel/profilecard/?igsh=MTB0dDdjejA5cXJrMQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        let swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            effect: "fade",
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
+                // Мобильное меню
+                const mobileMenu = document.getElementById('mobile-menu');
+        const navbar = document.querySelector('.navbar ul');
+
+        mobileMenu.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+
+        // Закрытие меню при нажатии на ссылки
+        const navLinks = document.querySelectorAll('.navbar ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navbar.classList.remove('active');
+            });
+        });
+
+        // Модальное окно
+        const modal = document.getElementById('modal');
+        const openModalBtn = document.getElementById('openModalBtn');
+        const openModalBtnTop = document.getElementById('openModalBtnTop');
+        const closeModal = document.querySelector('.close');
+
+        openModalBtn.addEventListener('click', () => {
+            modal.style.display = 'block';
+        });
+
+        openModalBtnTop.addEventListener('click', () => {
+            modal.style.display = 'block';
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Обработка формы
+        const feedbackForm = document.getElementById('feedbackForm');
+        feedbackForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const phone = document.getElementById('phone').value;
+            alert(`Спасибо, ${firstName} ${lastName}! Мы свяжемся с вами по номеру ${phone}.`);
+            modal.style.display = 'none';
+            feedbackForm.reset();
+        });
+    </script>
+</body>
+</html>
