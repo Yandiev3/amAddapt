@@ -5,7 +5,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+ul{
+    list-style: none;   
+}
 
 body {
     font-family: 'Ubuntu', sans-serif, system-ui;
