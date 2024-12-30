@@ -6,6 +6,7 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: 'Ubuntu', sans-serif, system-ui;
     margin: 0 auto;
@@ -222,7 +223,6 @@ main {
 
 .companycontainer {
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 20px;
 }
@@ -358,6 +358,8 @@ footer {
 
 .footer-col ul li {
     margin-bottom: 10px;
+    list-style: none;
+
 }
 
 .footer-col ul li a {
