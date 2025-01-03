@@ -128,15 +128,36 @@ main {
     height: calc(100vh - 80px);
     width: 100%;
     background-color: black;
-    background-image: url(image/bgtop.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     position: relative;
+    overflow: hidden;
+}
+
+.background-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.background-image.active {
+    opacity: 1;
 }
 
 .topcontainer::before {
@@ -194,6 +215,11 @@ main {
     align-items: center;
     flex-direction: column;
     text-align: center;
+}
+
+.additemBorder{
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
 }
 
 .advitem img {
@@ -258,51 +284,145 @@ main {
 }
 
 /* Портфолио */
+
 .portfolio {
-    position: relative;
-    height: calc(100vh - 80px);
-}
-
-.swiper-container {
     width: 100%;
-    height: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: 64px;
 }
 
-.swiper-slide {
-    background-position: center;
-    background-size: cover;
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-.swiper-slide img {
-    display: block;
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: 250px;
+}
+
+.portfolio-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-    width: 40px;
-    height: 40px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
+.portfolio-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
-    font-size: 20px;
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
 }
 
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
+.portfolio-item:hover .portfolio-overlay {
+    transform: translateY(0);
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+.portfolio-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
 }
 
-.swiper-pagination-bullet {
+.modal-content {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-slider {
+    position: relative;
+}
+
+.slider-item {
+    display: none;
+}
+
+.slider-item.active {
+    display: block;
+}
+
+.slider-item img {
+    width: 100%;
+    height: auto;
+}
+
+.slider-text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.prev-slide, .next-slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0.7;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
 }
 
-.swiper-pagination-bullet-active {
-    background-color: #fff;
-    opacity: 1;
+.prev-slide {
+    left: 10px;
+}
+
+.next-slide {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .portfolio-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+
+    .portfolio-item {
+        scroll-snap-align: start;
+    }
+
+    .modal-content {
+        width: 100%;
+        padding: 15px;
+    }
 }
 
 /* Карта */
@@ -389,7 +509,7 @@ footer {
 /* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
     .topcontainer {
-        height: auto;
+        height: calc(100vh - 80px);
         padding: 100px 20px;
     }
 
@@ -515,5 +635,9 @@ footer {
 
     .submit-btn {
         font-size: 14px;
+    }
+
+    .additemBorder{
+        border: none;
     }
 }
