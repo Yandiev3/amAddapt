@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <title>AMAD</title>
 </head>
@@ -12,7 +11,7 @@
     <header>
         <div class="hcontainer">
             <div class="logo">
-                <a href="#"><img src="image/logo.png" alt="AMAD"></a>
+                <a href="#"><img src="image/site/logo.png" alt="AMAD"></a>
             </div>
             <nav class="navbar">
                 <ul>
@@ -58,9 +57,9 @@
             </div>
             <!-- Фоновые изображения -->
             <div class="background-images">
-                <img src="img/K1.webp" alt="Фон 1" class="background-image active">
-                <img src="img/P1.webp" alt="Фон 2" class="background-image">
-                <img src="img/V1.jpg" alt="Фон 3" class="background-image">
+                <img src="./image/site/portsliderBG.jpeg"class="background-image active">
+                <img src="./image/site/bgtop2.jpg" class="background-image">
+                <img src="./image/site/bgtop3.jpg" class="background-image">
             </div>
         </div>
             <div class="profile">
@@ -69,23 +68,22 @@
         <div class="advantages">
             <div class="advcontainer">
                 <div class="advitem">
-                    <img src="image/adv1.png">
+                    <img src="image/site/adv1.png">
                     <h5>Доставка по России</h5>
                     <p>Доставим в любую точку России</p>
                 </div>
                 <div class="advitem additemBorder">
-                    <img src="image/adv2.png">
+                    <img src="image/site/adv2.png">
                     <h5>Удобная оплата</h5>
                     <p>Все формы оплаты</p>
                 </div>
                 <div class="advitem">
-                    <img src="image/adv3.png">
+                    <img src="image/site/adv3.png">
                     <h5>Гарантия качества</h5>
                     <p>Прописанная в договоре</p>
                 </div>
             </div>
         </div>
-
         <div id="about">    
             <div class="company">
                 <div class="companycontainer">
@@ -98,7 +96,7 @@
                         </p>
                     </div>
                     <div class="companyimg">
-                        <img src="image/company.jpeg">
+                        <img src="image/site/company.jpeg">
                     </div>
                 </div>
             </div>
@@ -112,59 +110,67 @@
 
             <div class="portfolio-container">
                 <!-- Карточка 1 -->
-                <div class="portfolio-item" data-category="kitchen">
-                    <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&q=80&w=800" alt="Кухня">
+                <div class="portfolio-item" data-category="Freedom">
+                    <img src="/image/portfolio/Фридом/IMG_2001.jpg">
                     <div class="portfolio-overlay">
-                        <h3>Современная кухня</h3>
-                        <p>Эргономичное пространство для кулинарного творчества</p>
+                        <h3>Жк Фридом</h3>
                     </div>
                 </div>
         
                 <!-- Карточка 2 -->
-                <div class="portfolio-item" data-category="bedroom">
-                    <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&q=80&w=800" alt="Спальня">
+                <div class="portfolio-item" data-category="Lobachevsky">
+                    <img src="./image/portfolio/Лобачевский/2022-02-01 1.jpg">
                     <div class="portfolio-overlay">
-                        <h3>Уютная спальня</h3>
-                        <p>Комфортное пространство для отдыха и релаксации</p>
+                        <h3>Жк Лобачевский</h3>
                     </div>
                 </div>
         
                 <!-- Карточка 3 -->
-                <div class="portfolio-item" data-category="hallway">
-                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800" alt="Прихожая">
+                <div class="portfolio-item" data-category="Balaklava">
+                    <img src="./image/portfolio/Балаклавский/№1.jpg">
                     <div class="portfolio-overlay">
-                        <h3>Элегантная прихожая</h3>
-                        <p>Функциональное пространство для встречи гостей</p>
+                        <h3>Балаклавский проспект</h3>
                     </div>
                 </div>
         
                 <!-- Карточка 4 -->
-                <div class="portfolio-item" data-category="bathroom">
-                    <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&q=80&w=800" alt="Ванная">
+                <div class="portfolio-item" data-category="Yartsevskaya">
+                    <img src="./image/portfolio/Ярцевская/IMG_1.JPG">
                     <div class="portfolio-overlay">
-                        <h3>Современная ванная</h3>
-                        <p>Дизайн с акцентом на комфорт</p>
+                        <h3>Ярцевская</h3>
+                    </div>
+                </div>
+
+                <!-- Карточка 5 -->
+                <div class="portfolio-item" data-category="Shlyuzovaya">
+                    <img src="./image/portfolio/Шлюзовая/IMG_1.JPG">
+                    <div class="portfolio-overlay">
+                        <h3>Шлюзовая</h3>
                     </div>
                 </div>
             </div>
+            <button class="show-more-btn" id="showMoreBtn">Показать еще</button>
         </div>
     </div>
         
-        <!-- Модальное окно -->
-        <div class="modalP" id="modalP">
-            <div class="modal-contentP">
-                <span class="close-buttonP">&times;</span>
-                <div class="modal-image-containerP">
-                    <img src="" alt="" class="modal-imageP">
-                    <button class="nav-buttonP prevP">&lt;</button>
-                    <button class="nav-buttonP nextP">&gt;</button>
-                </div>
-                <div class="modal-textP">
-                    <h3></h3>
-                    <p></p>
-                </div>
+
+
+<!-- Модальное окно -->
+<div class="modalP" id="modalP">
+    <div class="modal-contentP">
+        <span class="close-buttonP">&times;</span>
+        <div class="modal-image-containerP">
+            <img src="" alt="" class="modal-imageP">
+            <button class="nav-buttonP prevP">&lt;</button>
+            <button class="nav-buttonP nextP">&gt;</button>
+            <div class="modal-textP" id="modalText">
+                <h3></h3>
+                <p></p>
             </div>
+            <div class="details-button" id="detailsButton">Подробнее</div>
         </div>
+    </div>
+</div>
         
 
         <div class="map-cont">
@@ -200,244 +206,8 @@
         </div>
     </footer>
 
-    <script>
-        document.getElementById('phone').addEventListener('focus', function (e) {
-        // Если поле пустое, добавляем +7
-        if (!e.target.value.startsWith('+7')) {
-            e.target.value = '+7';
-        }
-    });
+    <script src="./js/data.js"></script>
+    <script src="./js/script.js"></script>
 
-        document.getElementById('phone').addEventListener('input', function (e) {
-        let x = e.target.value
-            .replace(/\D/g, '') // Удаляем все нецифровые символы
-            .match(/(\d{0,1})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/); // Разбиваем на группы
-
-        e.target.value = '+7' 
-            + (x[2] ? ' (' + x[2] : '') 
-            + (x[3] ? ') ' + x[3] : '') 
-            + (x[4] ? '-' + x[4] : '') 
-            + (x[5] ? '-' + x[5] : '');
-    });
-
-        document.addEventListener('DOMContentLoaded', function() {
-        const backgroundImages = document.querySelectorAll('.background-image');
-        let currentIndex = 0;
-
-        function changeBackground() {
-            // Убираем класс active у текущего изображения
-            backgroundImages[currentIndex].classList.remove('active');
-
-            // Переходим к следующему изображению
-            currentIndex = (currentIndex + 1) % backgroundImages.length;
-
-            // Добавляем класс active к новому изображению
-            backgroundImages[currentIndex].classList.add('active');
-        }
-
-        // Меняем фон каждые 5 секунд (5000 мс)
-        setInterval(changeBackground, 5000);
-    });
-
-
-        // Мобильное меню
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navbar = document.querySelector('.navbar ul');
-
-        mobileMenu.addEventListener('click', () => {
-            navbar.classList.toggle('active');
-        });
-
-        // Закрытие меню при нажатии на ссылки
-        const navLinks = document.querySelectorAll('.navbar ul li a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navbar.classList.remove('active');
-            });
-        });
-
-        // Модальное окно
-        const modal = document.getElementById('modal');
-        const openModalBtn = document.getElementById('openModalBtn');
-        const openModalBtnTop = document.getElementById('openModalBtnTop');
-        const closeModal = document.querySelector('.close');
-
-        openModalBtn.addEventListener('click', () => {
-            modal.style.display = 'block';
-        });
-
-        openModalBtnTop.addEventListener('click', () => {
-            modal.style.display = 'block';
-        });
-
-        closeModal.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-
-        window.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-
-        // Обработка формы
-                const feedbackForm = document.getElementById('feedbackForm');
-        feedbackForm.addEventListener('submit', (event) => {
-            event.preventDefault();
-
-            const firstName = document.getElementById('firstName').value;
-            const phone = document.getElementById('phone').value;
-
-            fetch('/submit-form', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ firstName, phone })
-            })
-            .then(response => response.json())
-            .then(data => {
-                alert('Ваша заявка отправлена!');
-                modal.style.display = 'none';
-                feedbackForm.reset();
-            })
-            .catch(error => {
-                console.error('Ошибка:', error);
-                alert('Произошла ошибка при отправке заявки.');
-            });
-        });
-
-
-        document.addEventListener('DOMContentLoaded', function() {
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
-    const modal = document.getElementById('modalP'); // Исправлено на modalP
-    const closeModalBtn = document.querySelector('.close-buttonP'); // Исправлено на close-buttonP
-    const modalImage = document.querySelector('.modal-imageP'); // Исправлено на modal-imageP
-    const modalText = document.querySelector('.modal-textP'); // Исправлено на modal-textP
-    const prevSlideBtn = document.querySelector('.prevP'); // Исправлено на prevP
-    const nextSlideBtn = document.querySelector('.nextP'); // Исправлено на nextP
-    let currentIndex = 0;
-    let currentProjects = [];
-
-    // Данные о проектах
-    const projects = {
-        kitchen: [
-            {
-                image: "./img/K2.webp",
-                title: "Кухня 1",
-                description: "Эргономичное пространство для кулинарного творчества"
-            },
-            {
-                image: "./img/K3.webp",
-                title: "Кухня 2",
-                description: "Современный дизайн кухни с островом"
-            },
-        ],
-        bedroom: [
-            {
-                image: "./img/С2.webp",
-                title: "Спальня 1",
-                description: "Уютное пространство для отдыха и релаксации"
-            },
-            {
-                image: "./img/С3.webp",
-                title: "Спальня 2",
-                description: "Спальня в классическом стиле"
-            }
-        ],
-        hallway: [
-            {
-                image: "./img/P2.webp",
-                title: "Прихожая 1",
-                description: "Функциональное пространство для встречи гостей"
-            },
-            {
-                image: "./img/P3.webp",
-                title: "Прихожая 2",
-                description: "Функциональное пространство для встречи гостей"
-            }
-        ],
-        bathroom: [
-            {
-                image: "./img/V2.webp",
-                title: "Ванная 1",
-                description: "Современный дизайн с акцентом на комфорт"
-            },
-            {
-                image: "./img/V3.webp",
-                title: "Ванная 2",
-                description: "Современный дизайн с акцентом на комфорт"
-            },
-        ]
-    };
-
-    // Открытие модального окна и загрузка проектов
-    portfolioItems.forEach(item => {
-        item.addEventListener('click', function() {
-            const category = item.getAttribute('data-category'); // Получаем категорию из атрибута
-            currentProjects = projects[category]; // Загружаем проекты для выбранной категории
-            currentIndex = 0; // Сбрасываем индекс
-            renderSlider();
-            modal.style.display = 'flex';
-        });
-    });
-
-    // Закрытие модального окна
-    closeModalBtn.addEventListener('click', function() {
-        modal.style.display = 'none';
-    });
-
-    window.addEventListener('click', function(event) {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
-
-    // Листание слайдов
-    prevSlideBtn.addEventListener('click', function() {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : currentProjects.length - 1;
-        renderSlider();
-    });
-
-    nextSlideBtn.addEventListener('click', function() {
-        currentIndex = (currentIndex < currentProjects.length - 1) ? currentIndex + 1 : 0;
-        renderSlider();
-    });
-
-    // Функция для отрисовки слайдов
-    function renderSlider() {
-        if (currentProjects.length > 0) {
-            const project = currentProjects[currentIndex];
-            modalImage.src = project.image; // Устанавливаем изображение
-            modalImage.alt = project.title; // Устанавливаем альтернативный текст
-            modalText.innerHTML = `
-                <h3>${project.title}</h3>
-                <p>${project.description}</p>
-            `; // Обновляем текст
-        }
-    }
-        });
-
-    // Прокрутка с учетом высоты заголовка
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault(); // Отменяем стандартное поведение ссылки
-
-            const targetId = this.getAttribute('href'); // Получаем ID целевого элемента
-            const targetElement = document.querySelector(targetId); // Находим целевой элемент
-
-            if (targetElement) {
-                const offset = 80; // Высота заголовка
-                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
-
-                // Плавная прокрутка
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-    </script>
 </body>
 </html>
